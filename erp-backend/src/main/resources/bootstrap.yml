@@ -1,0 +1,18 @@
+﻿# bootstrap.yml — loaded BEFORE application.yml by Spring Cloud.
+# Its only job here is to configure Jasypt so that ENC(...) values in
+# application.yml are decrypted before the DataSource bean is created.
+
+spring:
+  cloud:
+    config:
+      enabled: false  # Spring Cloud Config server not used in this project
+
+jasypt:
+  encryptor:
+    password: password              # master key used to decrypt ENC(...) values
+    algorithm: PBEWithMD5AndDES     # must match JasyptConfig.java
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator  # DES does not use an IV
+    proxy-property-sources: false   # standard Jasypt integration; no proxy needed
+    property:
+      prefix: "ENC("  # marker that tells Jasypt a property value is encrypted
+      suffix: ")"

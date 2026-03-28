@@ -1,0 +1,11 @@
+﻿# application.yml — main application configuration.
+# The database password is encrypted with Jasypt and decrypted at startup
+# using the settings in bootstrap.yml and JasyptConfig.java.
+
+spring:
+  datasource:
+    url: jdbc:postgresql://[::1]:5433/erp_demo_db  # IPv6 localhost, non-default port 5433
+    username: erp_app_user
+    password: ENC(HALtUx2SGTNbrdUyP5SASB7ZYPabgqnh)  # Jasypt-encrypted DB password
+  flyway:
+    enabled: true  # automatically run pending migrations in db/migration/ at startup

@@ -1,0 +1,26 @@
+﻿/* Force browser into dark-colour-scheme — prevents OS/UA white fill */
+:root { color-scheme: dark; }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  background-color: #000000 !important;
+  color: #ff6600;
+  height: 100%;
+}
+
+body {
+  background-color: #000000 !important;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-synthesis: none;
+}
+
+#root {
+  background-color: #000000 !important;
+  min-height: 100svh;
+  width: 100%;
+  max-width: 100%;
+  border: none !important;
+  text-align: left;
+}
