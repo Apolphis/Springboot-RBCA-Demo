@@ -211,7 +211,7 @@ Important Flyway rule:
 10. How To Run The Backend
 --------------------------
 Open PowerShell in:
-- C:\Users\jorda\Documents\springboot-workspace\springboot-rbca-demo\erp-backend
+- C:\Users\youruserhere\Documents\springboot-workspace\springboot-rbca-demo\erp-backend
 
 Compile:
 - .\mvnw.cmd clean compile
@@ -225,7 +225,7 @@ Expected backend URL:
 11. How To Run The Frontend
 ---------------------------
 Open PowerShell in:
-- C:\Users\jorda\Documents\springboot-workspace\springboot-rbca-demo\erp-frontend
+- C:\Users\youruserhere\Documents\springboot-workspace\springboot-rbca-demo\erp-frontend
 
 Install dependencies:
 - npm install
